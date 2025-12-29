@@ -1,16 +1,20 @@
 package com.example.learn_spring_framework;
 
-public class MarioGame{
-	public void jump(){
+public class MarioGame implements GamingConsole{
+	@Override
+	public void up(){
 		System.out.println("Mario Jump");
 	}
-	public void duck(){
+	@Override
+	public void down(){
 		System.out.println("Mario Duck");
 	}
-	public void right(){
+	@Override
+	public void left(){
 		System.out.println("Mario moving right");
 	}
-	public void left(){
+	@Override
+	public void right(){
 		System.out.println("Mario moving left");
 	}
 }

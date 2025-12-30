@@ -1,4 +1,5 @@
 package com.example.learn_spring_framework;
+import java.util.*;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -13,5 +14,11 @@ public class App02HelloWorldSpring{
 
 		//3. Retriving Beans managed by Spring
 		System.out.println(context.getBean("name"));
+		System.out.println(context.getBean("age"));
+		System.out.println(context.getBean("person"));
+		System.out.println(context.getBean("person2"));
+		System.out.println(context.getBean("address"));
+		System.out.println(context.getBean("w"));
+		Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
 	}
 }
